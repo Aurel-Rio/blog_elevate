@@ -1,32 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Navbar from './navbar';
 import Footer from './footer';
 
-const Articles = () => {
-  const [articles, setArticles] = useState([]);
-
-  useEffect(() => {
-    // Effectuez une requête API pour récupérer les articles
-    fetch('https://api.example.com/articles')
-      .then(response => response.json())
-      .then(data => setArticles(data))
-      .catch(error => console.log(error));
-  }, []);
-
+const Accueil = () => {
   return (
     <div>
       <Navbar />
 
       <main>
-        <h1>Articles</h1>
-        <p>Découvrez notre collection d'articles informatifs et instructifs sur Node.js et React.js.</p>
-        <ul>
-          {articles.map(article => (
-            <li key={article.id}>
-              <a href={`/articles/${article.id}`}>{article.title}</a>
-            </li>
-          ))}
-        </ul>
+        <h1>Blog-Elevate</h1>
+        <p>Bienvenue sur notre blog dédié à Node.js et React.js.</p>
+        <p>Explorez nos articles informatifs, découvrez les dernières tendances et améliorez vos compétences en développement web.</p>
       </main>
 
       <Footer />
@@ -34,4 +18,4 @@ const Articles = () => {
   );
 };
 
-export default Articles;
+export default Accueil;

@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './navbar';
 import Footer from './footer';
 
-const APropos = () => {
+const Apropos = () => {
   return (
     <div>
       <Navbar />
@@ -18,4 +18,4 @@ const APropos = () => {
   );
 };
 
-export default APropos;
+export default Apropos;

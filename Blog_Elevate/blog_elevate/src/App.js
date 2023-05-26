@@ -1,31 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Accueil from './Accueil';
-import Articles from './Articles';
-import Categories from './Categories';
-import APropos from './APropos';
-import Contact from './Contact';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Accueil from './components/Accueil';
+import Articles from './components/Articles';
+import Categories from './components/Categories';
+import Apropos from './components/APropos';
+import Contact from './components/Contact';
 
 const App = () => {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/">
-          <Accueil />
-        </Route>
-        <Route path="/articles">
-          <Articles />
-        </Route>
-        <Route path="/categories">
-          <Categories />
-        </Route>
-        <Route path="/a-propos">
-          <APropos />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Accueil />} />
+        <Route path="/Articles" element={<Articles />} />
+        <Route path="/Categories" element={<Categories />} />
+        <Route path="/Apropos" element={<Apropos />} />
+        <Route path="/Contact" element={<Contact />} />
+      </Routes>
     </Router>
   );
 };
